@@ -68,7 +68,10 @@ section{
     font-size: 20px;
     font-weight: 100;
 }
-a{
+.landing > span{
+    line-height: 24px;
+}
+.landing > span > a{
     text-decoration: none;
     height: 24px;
     line-height: 24px;
@@ -76,11 +79,8 @@ a{
     margin: 0px 20px;
     font-size: 24px;
 }
-.landing > span{
-    line-height: 24px;
-}
 
-.projects{
+/*.projects{
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
@@ -125,4 +125,4 @@ a{
     position: relative;
     margin: 5px;
     height: 30%;
-}
+}*/
