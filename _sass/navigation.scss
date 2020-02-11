@@ -1,0 +1,18 @@
+.navbar{
+    position: fixed;
+    top: $header-height;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: $navbar-width;
+    z-index: 999999;
+}
+
+.bg-light{
+    background-color: $bg-light;
+}
+
+.bg-dark{
+    background-color: $bg-dark;
+}

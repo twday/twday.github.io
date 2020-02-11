@@ -1,0 +1,47 @@
+.projects{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+.project{
+    position: relative;
+    margin: 20px;
+    height: 400px;
+    width: 500px;
+    background-color: #d4d4d4;
+    border-radius: 1px;
+
+    &--wvr{
+        grid-column: 2 / 4;
+        grid-row: 2;
+        background-image: url('/assets/images/wheelchair-vr.jpeg');
+    }
+    &--wmr{
+        grid-column: 4 / 6;
+        grid-row: 2;
+        background-image: url('/assets/images/wheelchair-vr.jpeg');
+    }
+    &--svr{
+        grid-column: 3 / 5;
+        grid-row: 3;
+        background-image: url('/assets/images/wheelchair-vr.jpeg');
+    }
+
+    &__title{
+        position: relative;
+        height: 70%;
+        background-position: top center;
+        background-size: cover;
+    }
+    &__title h1{
+        position: absolute;
+        margin: 5px;
+        bottom: 0;
+        color: white;
+    }
+    &__description{
+        position: relative;
+        margin: 5px;
+        height: 30%;
+    }
+}

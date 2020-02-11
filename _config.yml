@@ -1,0 +1,11 @@
+title: TWDay
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+github: [metadata]
+sass:
+  sass-dir: _sass
+  style: compressed
+collections:
+  - sections

@@ -1,0 +1,24 @@
+section{
+    display: flex;
+    width: 900px;
+    min-height: 500px;
+    height: fit-content;
+    margin: auto;
+    
+    & a {
+        position: relative;
+        top: -$header-height;
+    }
+
+    .section__header{
+        text-align: left;
+        
+        & h1{
+            font-weight: 300;
+            font-size: 30px;
+            & > span{
+                color: #CE7604;
+            }
+        }
+    }
+}
