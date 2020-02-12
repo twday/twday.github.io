@@ -2,10 +2,39 @@ section{
     display: flex;
     flex-direction: column;
     width: 900px;
-    min-height: 500px;
+    min-height: 550px;
     height: fit-content;
     margin: auto;
-    
+
+    & .title{
+        font-size: medium;
+        & b {
+            font-size: large;
+        }
+        & .date {
+            display: block;
+            margin: 0;
+            font-size: small;
+            float: right;
+        }
+    }
+
+    & ul {
+        margin: 0;
+        text-decoration: none;
+        list-style: none;
+
+        & li {
+            margin: 10px 0;
+
+            & span {
+                display: block;
+                font: small;
+                margin: 10px 0px;
+            }
+        }
+    }
+
     & > a {
         position: relative;
         top: -$header-height;
@@ -20,8 +49,19 @@ section{
             font-weight: 300;
             font-size: 30px;
             & > span{
-                color: #CE7604;
+                color: $accent-colour;
             }
+        }
+    }
+
+    & table {
+        & th {
+            width: 150px;
+            text-align: center;
+        }
+        & td {
+            width: 150px;
+            text-align: center;
         }
     }
 }

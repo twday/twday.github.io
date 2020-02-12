@@ -16,7 +16,7 @@ window.onload = (e) => {
             var id = section.querySelector('a').id;
             var link = document.querySelector("a[href='#"+id+"']");
 
-            if (bounds.top >= 0 && bounds.bottom <= height){
+            if (bounds.top >= -150 && bounds.bottom <= height + 150){
                 link.classList.add("nav-item_active");
             } else {
                 link.classList.remove("nav-item_active");
