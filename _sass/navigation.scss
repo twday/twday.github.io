@@ -1,18 +1,32 @@
-.navbar{
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     position: fixed;
     top: $header-height;
     left: 0;
     margin: 0;
-    padding: 0;
-    height: 100%;
+    height: calc(100% - #{$header-height});
     width: $navbar-width;
     z-index: 999999;
+
+    & .nav-item {
+        display: block;
+        height: fit-content;
+        padding: 5px;
+        text-decoration: none;
+        color: lighten($color: $bg-dark, $amount: 50);
+
+        &_active{
+            border-right: solid orange 5px;
+        }
+    }
 }
 
-.bg-light{
+.bg-light {
     background-color: $bg-light;
 }
 
-.bg-dark{
+.bg-dark {
     background-color: $bg-dark;
 }

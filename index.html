@@ -2,70 +2,8 @@
 layout: default
 title: Home
 ---
-            <section>
-                <div class="landing">
-                    <h1>Thomas W. Day</h1>
-                    <h2>Post-Doctoral Researcher</h2>
-                    <h3>Unity3D | Virtual Reality | Mixed Reality</h3>
-                    <span>
-                        {% include social-media.html %}
-                    </span>
-                </div>
-            </section>
 
-            {% for section in site.sections %}
-                {{section.content}}
-            {% endfor %}
-            
-            <section>
-                <div class="section__header">
-                    <h1>
-                        <span>Sof</span>tware Engineering
-                    </h1>
-                </div>
-            </section>
-
-            <section>
-                <div class="section__header">
-                    <h1>
-                        <span>Pub</span>lications
-                    </h1>
-                </div>
-            </section>
-
-           <!-- <section id="projects">
-               <div class="section__header">
-                    <h1>Projects</h1>
-                </div>
-                <div class="project project--wvr">
-                    <div class="project__title" style="background-image: url('assets/images/wheelchair-vr.jpeg')">
-                        <h1>Wheelchair-VR</h1>
-                    </div>
-                    <div class="project_description">
-                        <p>
-                            A low-cost virtual reality wheelchair training simulator
-                        </p>
-                    </div>
-                </div>
-                <div class="project project--wmr">
-                    <div class="project__title" style="background-image: url('assets/images/wheelchair-mr.jpg')">
-                        <h1>Wheelchair-MR</h1>
-                    </div>
-                    <div class="project_description">
-                        <p>
-                            A low-cost virtual reality wheelchair training simulator
-                        </p>
-                    </div>
-                </div>
-                <div class="project project--svr">
-                    <div class="project__title" style="background-image: url('assets/images/stroke-vr.png')">
-                        <h1>Stroke-VR</h1>
-                    </div>
-                    <div class="project_description">
-                        <p>
-                            A low-cost virtual reality wheelchair training simulator
-                        </p>
-                    </div>
-                </div>
-            </section>-->
-        
+{% assign sections = site.sections | sort: 'order' %}
+{% for section in sections %}
+    {{section.content}}
+{% endfor %}

@@ -8,4 +8,5 @@ sass:
   sass-dir: _sass
   style: compressed
 collections:
-  - sections
+  sections:
+    sort_by: sec_order

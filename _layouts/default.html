@@ -15,8 +15,9 @@
 
     <body>
         <nav class="navbar bg-dark">
-            {% for item in site.data.navigation %}
-                <a href="{{ item.link }}">{{ item.name }}</a>
+            {% assign sections = site.sections | sort: 'order' %}
+            {% for section in sections %}
+                <a class="nav-item" href="#{{ section.name }}">{{ section.name }}</a>
             {% endfor %}
         </nav>
 

@@ -8,16 +8,21 @@ header  {
 }
 
 .header__title{
-    height: $header-height;
+    height: fit-content;
+    margin: auto auto auto $navbar-width;
     color: #FFFFFF;
     text-align: center;
     font-weight: lighter;
 
     &--name{
+        margin: auto;
+        width: fit-content;
         font-size: xx-large;
     }
     
     &--post{
+        margin: auto;
+        width: fit-content;
         font-size: large;
     }
 
