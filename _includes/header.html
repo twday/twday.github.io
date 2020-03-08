@@ -1,6 +1,14 @@
 <header>
-    <div class="header__title header__title--hidden">
-        <div class="header__title--name">Thomas W. Day</div>
-        <div class="header__title--post">Post-Doctoral Researcher</div>
-    </div>
+    <nav class="navbar">
+        <input type="checkbox" id="hamburger"/>
+        <label for="hamburger"></label>
+        
+        <ul class="nav-list">
+            {% for item in site.data.navigation %}
+            <li class="nav-list_item {% if page.url == item.link %} nav-list_item--active{% endif %}">
+                <a href="{{ item.link }}"> {{ item.name }} </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
 </header>

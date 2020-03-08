@@ -1,6 +1,6 @@
 ---
-name: Projects
-order: 3
+layout: page
+title: Projects
 ---
 <section>
   <a id="{{ page.name }}"></a>
@@ -9,88 +9,18 @@ order: 3
           <span>Pro</span>jects
         </h1>
     </div>
-    <ul>
-        <li>
-            <div class="title">
-                <b>Wheelchair-VR</b>, A virtual reality simulator for training powered wheelchair manoeuvres 
-                <span class="date">
-                    Jul 2015 - May 2017
-                </span>
-            </div>
-            <span>
-                This project was designed to test whether Virtual Reality technology can be used to help train patients how successfully manoeuvre a powered wheelchair. Results showed a positive effect of training using the VR simulator on the patients compared to non-VR and a control condition.
-            </span>
-            <span>
-                <b>Technologies:</b> Oculus, Leap Motion, Unity3D, C#
-            </span>
-            <span>
-                <b>Collaborators:</b> Liverpool Wheelchair Service, Wirral Community NHS Trust Wheelchair Service, Cardiff and Vale UHB Posture Mobility Centre, and Betsi Cadwaladr UHB Posture and Mobility Service.
-            </span>
-        </li>
-        <li>
-            <div class="title">
-                <b>Wheelchair-MR</b>, A mixed reality training environment for manoeuvring wheelchair 
-                <span class="date">
-                    Oct 2016 - Oct 2019
-                </span>
-            </div>
-            <span>
-                This project was a continuation of the Wheelchair-VR project. It was designed as an attempt to reduce the effects of cybersickness by introducing the virtual training environment in to the real world using the latest Mixed Reality technologies.
-            </span>
-            <span>
-                <b>Technologies:</b> Microsoft Hololens, Mixed Reality Toolkit, Unity3D, C#
-            </span>
-        </li>
-        <li>
-            <div class="title">
-                <b>VIRTUE</b>, A VR system for assisting in the cognitive recovery of patients impaired by a stroke. 
-                <span class="date">
-                    May 2017 - Aug 2020
-                </span>
-            </div>
-            <span>
-                This project is employing cutting edge Virtual Reality technology and the latest Games Engine capabilities to assist in the cognitive rehabilitation of stroke patients by allowing them to practice Activities of Daily Living in a safe environment, while getting immediate and meaningful feedback on their performance. The application is also designed to be adjustable so it can be configured to the patients current abilities.
-            </span>
-            <span>
-                <b>Technologies:</b> HTC Vive, Oculus, Virtual Reality Toolkit (VRTK), Unity3D, C#
-            </span>
-            <span>
-                <b>Collaborators:</b> Countess of Chester Hospital NHS Foundation Trust, Cadscan Ltd.
-            </span>
-        </li>
-        <li>
-            <div class="title">
-                <b>ParaVR</b>, A virtual reality system for training paramedics. 
-                <span class="date">
-                    Nov 2018 - Aug 2020
-                </span>
-            </div>
-            <span>
-                This project uses modern virtual reality technology to help paramedics train and practice essential procedures that they may not used very often, such as a Cricothyroidotomy.
-            </span>
-            <span>
-                <b>Technologies:</b> Oculus, Unity3d, C#, VRTK
-            </span>
-            <span>
-                <b>Collaborators:</b> Welsh Ambulance Service Trust, Bevan Commission
-            </span>
-        </li>
-        <li>
-            <div class="title">
-                <b>VCPR</b>, A virtual reality system for practicing CPR. 
-                <span class="date">
-                    Mar 2019 - Aug 2020
-                </span>
-            </div>
-            <span>
-                This project uses modern virtual reality technology to help teach correct CPR technique to school children.
-            </span>
-            <span>
-                <b>Technologies:</b> Oculus, Unity3d, C#, VRTK
-            </span>
-            <span>
-                <b>Collaborators:</b> Welsh Ambulance Service Trust, British Heart Foundation
-            </span>
-        </li>
-    </ul>
+    <div class="project_tiles">
+        {% for project in site.projects %}
+        <div class="project_tile project_tile--{{ project.tileSize }}">
+            <a href="{{ project.url }}">
+                {% if project.coverImage %}
+                <img src="assets/images/projects/{{ project.coverImage }}" alt="{{ project.title }}"/>
+                {% endif %}
+                <div class="project_tile-title">
+                    {{ project.title }}
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
 </section>

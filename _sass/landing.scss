@@ -1,8 +1,37 @@
 .landing{
-    width: fit-content;
-    height: fit-content;
+    display: grid;
     margin: auto;
-    text-align: center;
+    grid-template-columns: max-content auto;
+    grid-template-areas: 'profile main';
+
+    &_profile {
+        grid-area: profile;
+        margin: auto;
+        
+        &Img {
+            display: block;
+            border-radius: 100%;
+            margin: auto;
+            max-width: 200px;
+        }
+
+        & h1 {
+            text-align: center;
+            font-size: large;
+            font-weight: light;
+        }
+        
+        & h2 {
+            text-align: center;
+            font-size: medium;
+            font-weight: light;
+        }
+        
+    }
+
+    &_main {
+        grid-area: main;
+    }
 
     & > h1{
         font-weight: 300;

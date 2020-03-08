@@ -2,7 +2,7 @@ var body = document.body;
 var header = document.querySelector(".header__title");
 var sections = document.querySelectorAll("section");
 
-window.onload = (e) => {
+/*window.onload = (e) => {
     window.onscroll = (e) => {
         if (this.scrollY > sections[0].offsetHeight){
             header.classList.remove("header__title--hidden");
@@ -24,4 +24,4 @@ window.onload = (e) => {
 
         });
     };
-};
+};*/

@@ -1,47 +1,48 @@
-.projects{
+.project_tiles{
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
 }
-.project{
+.project_tile{
     position: relative;
-    margin: 20px;
-    height: 400px;
-    width: 500px;
-    background-color: #d4d4d4;
-    border-radius: 1px;
+    overflow: hidden;
+    transition: opacity .2s ease;
+    height: 200px;
+    min-width: 200px;
 
-    &--wvr{
-        grid-column: 2 / 4;
-        grid-row: 2;
-        background-image: url('/assets/images/wheelchair-vr.jpeg');
-    }
-    &--wmr{
-        grid-column: 4 / 6;
-        grid-row: 2;
-        background-image: url('/assets/images/wheelchair-vr.jpeg');
-    }
-    &--svr{
-        grid-column: 3 / 5;
-        grid-row: 3;
-        background-image: url('/assets/images/wheelchair-vr.jpeg');
+    &--small{
+        flex-grow: 1;
     }
 
-    &__title{
-        position: relative;
-        height: 70%;
-        background-position: top center;
-        background-size: cover;
+    &--large{
+        flex-grow: 2;
     }
-    &__title h1{
+
+    & > a {
+        display: block;
+        height: 100%;
+        width: 100%;
+        text-decoration: none;
+        color: black;
+    }
+
+    & > a > img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &:hover{
+        opacity: 0.3;
+    }
+
+    &-title{
+        display: inline-block;
         position: absolute;
-        margin: 5px;
-        bottom: 0;
-        color: white;
-    }
-    &__description{
-        position: relative;
-        margin: 5px;
-        height: 30%;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
     }
 }

@@ -9,4 +9,6 @@ sass:
   style: compressed
 collections:
   sections:
-    sort_by: sec_order
+    sort_by: order
+  projects:
+    output: true

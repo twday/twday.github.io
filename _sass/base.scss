@@ -1,9 +1,10 @@
-$header-height: 100px;
 $navbar-width: 100px;
 $bg-dark: #353E49;
 $accent-colour: #CE7604;
 
 html, body{
+    height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -12,10 +13,11 @@ html, body{
 }
 
 main{
+    position: relative;
     display: flex;
+    top: 50px;
     flex-direction: column;
-    height: 100%;
+    height: auto;
     width: 100%;
-    overflow-y: scroll !important;
-    margin: $header-height 0 auto $navbar-width;
+    margin: auto;
 }
