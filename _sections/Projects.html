@@ -3,12 +3,7 @@ layout: page
 title: Projects
 ---
 <section>
-  <a id="{{ page.name }}"></a>
-  <div class="section__header">
-      <h1>
-          <span>Pro</span>jects
-        </h1>
-    </div>
+    <a id="{{ page.name }}"></a>
     <div class="project_tiles">
         {% for project in site.projects %}
         <div class="project_tile project_tile--{{ project.tileSize }}">
@@ -16,9 +11,9 @@ title: Projects
                 {% if project.coverImage %}
                 <img src="assets/images/projects/{{ project.coverImage }}" alt="{{ project.title }}"/>
                 {% endif %}
-                <div class="project_tile-title">
+                <span>
                     {{ project.title }}
-                </div>
+                </span>
             </a>
         </div>
         {% endfor %}
