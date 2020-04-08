@@ -2,20 +2,18 @@
 layout: page
 title: Projects
 ---
-<section>
-    <a id="{{ page.name }}"></a>
-    <div class="project_tiles">
-        {% for project in site.projects %}
-        <div class="project_tile project_tile--{{ project.tileSize }}">
-            <a href="{{ project.url }}">
-                {% if project.coverImage %}
-                <img src="assets/images/projects/{{ project.coverImage }}" alt="{{ project.title }}"/>
-                {% endif %}
-                <span>
-                    {{ project.title }}
-                </span>
-            </a>
-        </div>
-        {% endfor %}
+<a id="{{ page.name }}"></a>
+<div class="project_tiles">
+    {% for project in site.projects %}
+    <div class="project_tile project_tile--{{ project.tileSize }}">
+        <a href="{{ project.url }}">
+            {% if project.coverImage %}
+            <img src="assets/images/projects/{{ project.coverImage }}" alt="{{ project.title }}"/>
+            {% endif %}
+            <span>
+                {{ project.title }}
+            </span>
+        </a>
     </div>
-</section>
+    {% endfor %}
+</div>

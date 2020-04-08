@@ -1,7 +1,8 @@
 section{
     display: flex;
     flex-direction: column;
-    width: auto 10px;
+    width: 100%;
+    min-height: 300px;
     height: fit-content;
 
     & .title{
@@ -15,6 +16,12 @@ section{
             font-size: small;
             float: right;
         }
+    }
+
+    & p{
+        margin: auto;
+        width: fit-content;
+        height: fit-content;
     }
 
     & ul {
@@ -38,7 +45,7 @@ section{
     }
 
     .section__header{
-        text-align: left;
+        text-align: center;
         height: fit-content;
         width: 100%;
         

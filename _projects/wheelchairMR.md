@@ -8,7 +8,8 @@ tileSize: large
 ---
 This project was a continuation of the Wheelchair-VR project. It was designed as an attempt to reduce the effects of cybersickness by introducing the virtual training environment in to the real world using the latest Mixed Reality technologies.
 
-### Technologies:
+### Technologies
+
 + Microsoft Hololens
 + Mixed Reality Toolkit
 + Unity3D

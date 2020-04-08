@@ -3,18 +3,21 @@ layout: default
 title: Home
 ---
 
-<section class="landing">
+<section class="landing bg_dark">
     <div class="landing_profile">
         <img class="landing_profileImg" src="assets/images/profile.jpg" alt="Profile Picture">
+    </div>
+    <div class="landing_main">
         <h1>Thomas W. Day, Ph.D</h1>
         <h2>Researcher</h2>
     </div>
-    <div class="landing_main">
-        Software Developer with over 6 years of experience developing VR applications with Unity3D and C#
-    </div>
 </section>
 
-{% assign sections = site.sections %}
-{% for section in sections %}
-    {{section.content}}
+{% assign i = 1 %}
+{% for section in site.sections %}
+    {% assign c = i | modulo: 2 %}
+    <section class="bg_{% if c == 0 %}dark{% else %}light{% endif %}">
+        {{section.content}}
+    </section>
+    {% assign i = i | plus: 1 %}
 {% endfor %}

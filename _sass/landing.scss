@@ -1,7 +1,7 @@
 .landing{
     display: grid;
     margin: auto;
-    grid-template-columns: max-content auto;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: 'profile main';
 
     &_profile {
@@ -11,8 +11,8 @@
         &Img {
             display: block;
             border-radius: 100%;
-            margin: auto 10px;
-            max-width: 200px;
+            margin: 20px 10px;
+            max-width: 300px;
         }
 
         & h1 {

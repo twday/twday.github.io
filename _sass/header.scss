@@ -3,14 +3,13 @@ header  {
     top: 0px;
     height: 50px;
     width: 100%;
-    background-color: #353E49;
+    background-color: $header-colour;
     z-index: 99999;
 }
 
 .header__title{
     height: fit-content;
     margin: auto auto auto $navbar-width;
-    color: #FFFFFF;
     text-align: center;
     font-weight: lighter;
 

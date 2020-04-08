@@ -1,6 +1,31 @@
+/* Color Theme Swatches in Hex */
+$Software-1-hex: #101240;
+$Software-2-hex: #132640;
+$Software-3-hex: #1D4859;
+$Software-4-hex: #3FBF9B;
+$Software-5-hex: #4BF2B5;
+
+/* Color Theme Swatches in RGBA */
+$Software-1-rgba: rgba(15,18,63, 1);
+$Software-2-rgba: rgba(19,38,63, 1);
+$Software-3-rgba: rgba(29,72,89, 1);
+$Software-4-rgba: rgba(63,191,154, 1);
+$Software-5-rgba: rgba(75,242,180, 1);
+
+/* Color Theme Swatches in HSLA */
+$Software-1-hsla: hsla(236, 60, 15, 1);
+$Software-2-hsla: hsla(213, 53, 16, 1);
+$Software-3-hsla: hsla(196, 50, 23, 1);
+$Software-4-hsla: hsla(163, 50, 49, 1);
+$Software-5-hsla: hsla(157, 86, 62, 1);
+
 $navbar-width: 100px;
-$bg-dark: #353E49;
-$accent-colour: #CE7604;
+$bg-dark: $Software-1-hex;
+$bg-light: $Software-2-hex;
+$header-colour: $Software-2-hex;
+$font-colour: $Software-4-hex;
+$accent-colour: $Software-3-hex;
+
 
 html, body{
     height: 100%;
@@ -9,6 +34,7 @@ html, body{
     padding: 0;
     overflow-x: hidden;
     font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: $font-colour;
     scroll-behavior: smooth;    
 }
 
@@ -19,3 +45,11 @@ main{
     width: 100%;
     margin: auto;
 }
+
+.bg_dark{
+    background-color: $bg-dark;
+}
+.bg_light{
+    background-color: $bg-light;
+}
+
