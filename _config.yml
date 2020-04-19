@@ -5,10 +5,14 @@ plugins:
   - jekyll-feed
 github: [metadata]
 sass:
-  sass-dir: _sass
-  style: compressed
+  load_paths: 
+    - _sass
+    - node_modules
+  style: compact
+  sourcemap: development
 collections:
   sections:
     sort_by: order
   projects:
     output: true
+exclude: []

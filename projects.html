@@ -2,13 +2,14 @@
 layout: default
 title: Projects
 ---
+
 {% for project in site.projects %}
     {% if project.coverImage %}
-        ![{{ project.title }}]({{ site.baseurl }}/assets/images/projects/{{ project.coverImage }})
+        <img src="{{ site.baseurl }}/assets/images/projects/{{ project.coverImage }}" alt="{{project.title}}">
     {% endif %}
-    *{{ project.title }}* {{ project.timeSpan }}
+    <h1>{{ project.title }}</h1> {{ project.timeSpan }}
     {% if project.repo %}
-        {{ project.repo }}
+        <a href="{{ project.repo }}">GitHub</a>
     {% endif %}
     {{ project.subtitle }}
     {{ project.content }}

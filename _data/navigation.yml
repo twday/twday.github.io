@@ -1,4 +1,6 @@
 - name: Home
   link: /
+  icon: home
 - name: Projects
-  link: /projects
+  link: /projects.html
+  icon: code

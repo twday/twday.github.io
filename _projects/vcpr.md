@@ -3,7 +3,10 @@ layout: project
 title: VCPR
 subtitle: A virtual reality system for practicing CPR. 
 timeSpan: Mar 2019 - Aug 2020
-tileSize: small
+tags:
+ - VR
+ - Training
+ - Mobile
 ---
 This project uses modern virtual reality technology to help teach correct CPR technique to school children.
 

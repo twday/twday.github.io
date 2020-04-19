@@ -1,0 +1,53 @@
+---
+name: Funding
+---
+<a id="{{ page.name }}"></a>
+<div class="section__header">
+    <h1>
+        <span>Fun</span>ding
+    </h1>
+</div>
+<div class="mdc-data-table">
+    <table class="mdc-data-table__table" aria-label="Funding">
+        <thead>
+            <tr class="mdc-data-table__header-row">
+                <th class="mdc-data-table__header-cell" role="columnheader" scope="col">
+                    Funding Body
+                </th>
+                <th class="mdc-data-table__header-cell" role="columnheader" scope="col">
+                    Start Date
+                </th>
+                <th class="mdc-data-table__header-cell" role="columnheader" scope="col">
+                    End Date
+                </th>
+                <th class="mdc-data-table__header-cell" role="columnheader" scope="col">
+                    Project Title
+                </th>
+                <th class="mdc-data-table__header-cell" role="columnheader" scope="col">
+                    Financial Value
+                </th>
+            </tr>
+        </thead>
+        <tbody class="mdc-data-table__content">
+            {% for funding in site.data.funding %}
+            <tr class="mdc-data-table__row">
+                <td class="mdc-data-table__cell">
+                    {{ funding.funder }}
+                </td>
+                <td class="mdc-data-table__cell">
+                    {{ funding.date_from }}
+                </td>
+                <td class="mdc-data-table__cell">
+                    {{ funding.date_to }}
+                </td>
+                <td class="mdc-data-table__cell">
+                    {{ funding.project }}
+                </td>
+                <td class="mdc-data-table__cell">
+                    {{ funding.value }}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

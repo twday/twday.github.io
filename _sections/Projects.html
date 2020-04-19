@@ -1,19 +1,29 @@
 ---
-layout: page
+layout: default
 title: Projects
 ---
-<a id="{{ page.name }}"></a>
-<div class="project_tiles">
+<ul class="mdc-image-list mdc-image-list--masonry mdc-image-list--with-text-protection image-list">
     {% for project in site.projects %}
-    <div class="project_tile project_tile--{{ project.tileSize }}">
+    {% if project.coverImage %}
+    <li class="mdc-image-list__item mdc-ripple-surface">
         <a href="{{ project.url }}">
-            {% if project.coverImage %}
-            <img src="assets/images/projects/{{ project.coverImage }}" alt="{{ project.title }}"/>
-            {% endif %}
-            <span>
-                {{ project.title }}
-            </span>
+            <div class="mdc-image-list__image">
+                <img class="mdc-image-list__image" src="assets/images/projects/{{ project.coverImage}}"/>
+            </div>
+            <div class="mdc-image-list__supporting">
+                <span class="mdc-image-list__label">{{ project.title }}</span>
+                <div class="mdc-chip-set" role="grid">
+                    {% for tag in project.tags %}
+                    <div class="mdc-chip" role="row">
+                        <span role="gridcell">
+                                <span class="mdc-chip__text">{{ tag }}</span>
+                        </span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
         </a>
-    </div>
+    </li>
+    {% endif %}
     {% endfor %}
-</div>
+</ul>
