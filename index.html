@@ -3,18 +3,26 @@ layout: default
 title: Home
 ---
 
-<section class="landing page-section">
-    <div class="landing_profile">
-        <img class="landing_profileImg" src="assets/images/profile.jpg" alt="Profile Picture">
-    </div>
-    <div class="landing_main">
-        <h1>Thomas W. Day, Ph.D</h1>
-        <h2>Researcher</h2>
+<section class="page-section">
+    <div class="card m-auto">
+        <div class="row no-gutters">
+            <div class="col-sm-4">
+                <img class="card-img" src="assets/images/profile.jpg" alt="Profile Picture">
+            </div>
+            <div class="col-sm-8 d-flex align-items-center">
+                <div class="card-body">
+                    <h4 class="card-title">Thomas W. Day, Ph.D</h4>
+                    <h5 class="card-subtitle">
+                        Researcher
+                    </h5>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
 {% for section in site.sections %}
-    <section class="page-section">
+    <section class="mb-5">
         {{section.content}}
     </section>
 {% endfor %}

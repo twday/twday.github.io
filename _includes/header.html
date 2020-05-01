@@ -1,29 +1,21 @@
-<header class="mdc-top-app-bar app-bar mdc-theme--primary-bg" id="app-bar">
-    <div class="mdc-top-app-bar__row">
-        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-            <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
-            <span class="mdc-top-app-bar__title mdc-theme--on-primary">{{ site.title }}</span>
-        </section>
-    </div>
+<header class="sticky-top">
+    <nav id="navbar" class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="{{'/' | relative_url }}">
+            {{ site.title }}
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav">
+                {% for item in site.data.navigation %}
+                <li class="nav-item {% if page.url == item.link %}active{% endif %}">
+                    <a class="nav-link" href="{{ item.link }}">
+                        {{ item.name | Uppercase }} {% if page.url == item.link %}<sr class="sr-only">(current)</sr>{% endif %}
+                    </a>
+                </li>
+                {% endfor %}    
+            </ul>
+        </div>
+    </nav>
 </header>
-<aside class="mdc-drawer mdc-drawer--dismissible mdc-top-app-bar--fixed-adjust" id="drawer">
-    <div class="mdc-drawer__content">
-        <nav class="mdl-list">
-            {% for item in site.data.navigation %}
-            <a class="mdc-list-item {% if page.url == item.link %}mdc-list-item--activated" aria-current="page"{% else %}"{% endif %} href="{{ item.link }}">
-                {% if item.icon %}
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">{{item.icon}}</i>
-                {% endif %}
-                <span class="mdc-list-item__text"> {{ item.name }} </span>
-            </a>
-            {% endfor %}
-            <!--<hr class="mdc-list-divider">
-            <h6 class="mdc-list-group__subheader">Projects</h6>
-            {% for project in site.projects %}
-            <a class="mdc-list-item" href="{{project.url}}">
-                <span class="mdc-list-item__text">{{project.title}}</span>
-            </a>
-            {% endfor %}-->
-        </nav>
-    </div>
-</aside>

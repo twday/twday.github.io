@@ -1,0 +1,23 @@
+- role: Freelance Software Developer
+  employer: Reality Studios, United Kingdom
+  date: Jul 2019 - Present
+  description: Freelance Unity Software Development
+  technologies: [Unity3D, C#, Mobile Development, Oculus]
+- role: Post-Doctoral Researcher
+  employer: Department of Computer Science, University of Chester United Kingdom 
+  date: Oct 2018 - Present
+  description: Development and Validation of a Virtual Reality Cognitive Rehabilitation Tool for Stroke Patients working with Industrial collaborators and NHS Clients
+  technologies: [Unity3D, C#, Amazon Polly, SteamVR, Oculus, VRTK]
+- role: Cadet Forces Adult Volunteer
+  employer: 1330 (Warrington) Squadron, RAF Air Cadets 
+  date: Jan 2017 - Present
+  description: Assisting in the training of young people and encouraging interest in STEM using Virtual Reality
+- role: Demonstrator
+  employer: Department of Computer Science, University of Chester, Chester, United Kingdom 
+  date: Oct 2015 - Dec 2018  
+  description: Assisting the teaching of undergraduate students for their C++ programming coursework and assignments
+- role: Intern
+  employer: Advanced Medical Imaging and Visualization Unit, Bangor University, Gwynedd, UK 
+  date: Jun 2014 - Sep 2014 
+  description: Research and development of medical applications using virtual environments and haptic technologies
+  technologies: [Unity3D, C#, Oculus]

@@ -2,28 +2,23 @@
 layout: default
 title: Projects
 ---
-<ul class="mdc-image-list mdc-image-list--masonry mdc-image-list--with-text-protection image-list">
+<div class="card-columns m-auto">
     {% for project in site.projects %}
-    {% if project.coverImage %}
-    <li class="mdc-image-list__item mdc-ripple-surface">
-        <a href="{{ project.url }}">
-            <div class="mdc-image-list__image">
-                <img class="mdc-image-list__image" src="assets/images/projects/{{ project.coverImage}}"/>
-            </div>
-            <div class="mdc-image-list__supporting">
-                <span class="mdc-image-list__label">{{ project.title }}</span>
-                <div class="mdc-chip-set" role="grid">
-                    {% for tag in project.tags %}
-                    <div class="mdc-chip" role="row">
-                        <span role="gridcell">
-                                <span class="mdc-chip__text">{{ tag }}</span>
-                        </span>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </a>
-    </li>
-    {% endif %}
+    <div class="card text-{{project.color}}">
+        {% if project.coverImage %}
+        <img src="assets/images/projects/{{ project.coverImage }}" class="card-img">
+        <div class="card-img-overlay">
+        {% else %}
+        <div class="card-body">
+        {% endif %}
+            <h5 class="card-title">{{ project.title }}</h5>
+            <a class="stretched-link" href="{{ project.url }}"></a>
+            <p class="card-text">
+                {% for tag in project.tags %}
+                    <span class="badge badge-info">{{ tag }}</span>
+                {% endfor %}
+            </p>
+        </div>
+    </div>
     {% endfor %}
-</ul>
+</div>

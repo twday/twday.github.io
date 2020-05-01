@@ -3,6 +3,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-feed
+relative_url: /
 github: [metadata]
 sass:
   load_paths: 

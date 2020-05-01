@@ -2,28 +2,25 @@
 name: Experience
 ---
 <a id="{{ page.name }}"></a>
-<div class="section__header">
-  <h1>
-    <span>Exp</span>erience
-  </h1>
-</div>
-<ul>
-  <li>
-    Post-Doctoral Researcher, Department of Computer Science, University of Chester United Kingdom Oct 2018 - Present
-    Development and Validation of a Virtual Reality Cognitive Rehabilitation Tool for Stroke Patients working with Industrial collaborators and NHS Clients
-    Technologies: Unity3D, C#, Amazon Polly, SteamVR, Oculus, VRTK
-  </li>
-  <li>
-    Cadet Forces Adult Volunteer, 1330 (Warrington) Squadron, RAF Air Cadets Jan 2017 - Present
-    Assisting in the training of young people and encouraging interest in STEM using Virtual Reality
-  </li>
-  <li>
-    Demonstrator, Department of Computer Science, University of Chester, Chester, United Kingdom Oct 2015 - Dec 2018  
-    Assisting the teaching of undergraduate students for their C++ programming coursework and assignments
-  </li>
-  <li>
-    Intern, Advanced Medical Imaging and Visualization Unit, Bangor University, Gwynedd, UK Jun 2014 - Sep 2014 
-    Research and development of medical applications using virtual environments and haptic technologies 
-    Technologies: Unity3D, C#, Oculus
-  </li>
-</ul>
+<h2 class="text-center font-weight-light">Experience</h2>
+{% for entry in site.data.experience %}
+  <div class="card border-light">
+    <div class="card-body">
+      <h5 class="card-title">
+        {{ entry.role }}
+      </h5>
+      <h6 class="card-subtitle mb-2 text-muted">
+        {{ entry.employer }}
+      </h6>
+      <p class="card-text m-0">
+        {% if entry.technologies %}
+          {% for tech in entry.technologies %}
+            <span class="badge badge-secondary">{{ tech }}</span>
+          {% endfor %}
+          <br/>
+        {% endif %}
+        {{ entry.description }}
+      </p>
+    </div>  
+  </div>
+{% endfor %}
