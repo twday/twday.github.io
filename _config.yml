@@ -1,0 +1,19 @@
+title: TWDay
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+relative_url: /
+github: [metadata]
+sass:
+  load_paths: 
+    - _sass
+    - node_modules
+  style: compact
+  sourcemap: development
+collections:
+  sections:
+    sort_by: order
+  projects:
+    output: true
+exclude: []

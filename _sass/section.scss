@@ -1,0 +1,70 @@
+.page-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 300px;
+    height: fit-content;
+
+    & .title{
+        font-size: medium;
+        & b {
+            font-size: large;
+        }
+        & .date {
+            display: block;
+            margin: 0;
+            font-size: small;
+            float: right;
+        }
+    }
+
+    & p{
+        margin: auto;
+        width: fit-content;
+        height: fit-content;
+    }
+
+    & ul {
+        margin: 0;
+        text-decoration: none;
+        list-style: none;
+
+        & li {
+            margin: 10px 0;
+
+            & span {
+                display: block;
+                font: small;
+                margin: 10px 0px;
+            }
+        }
+    }
+
+    & > a {
+        position: relative;
+    }
+
+    .section__header{
+        text-align: center;
+        height: fit-content;
+        width: 100%;
+        
+        & h1{
+            font-weight: 300;
+            font-size: 30px;
+            & > span{
+            }
+        }
+    }
+
+    & table {
+        & th {
+            width: 150px;
+            text-align: center;
+        }
+        & td {
+            width: 150px;
+            text-align: center;
+        }
+    }
+}

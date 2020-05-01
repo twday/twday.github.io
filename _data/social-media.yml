@@ -1,0 +1,29 @@
+email:
+  id: 'tday42@gmail.com'
+  href: 'mailto:'
+  title: 'Email'
+  icon: 'fa fa-envelope'
+
+orcid:
+  id: '0000-0002-9153-4862'
+  href: 'https://orcid.org/'
+  title: 'Orcid'
+  icon: 'ai ai-orcid'
+
+twitter:
+  id: 'drtwday'
+  href: 'https://twitter.com/'
+  title: 'Twitter'
+  icon: 'fa fa-twitter'
+
+linkedin:
+  id: 'twday'
+  href: 'https://linkedin.com/in/'
+  title: 'LinkedIn'
+  icon: 'fa fa-linkedin'
+
+github:
+  id: 'twday'
+  href: 'https://github.com/'
+  title: 'Github'
+  icon: 'fa fa-github'

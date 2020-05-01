@@ -1,0 +1,33 @@
+header  {
+    position: sticky;
+    top: 0px;
+    height: 50px;
+    width: 100%;
+    background-color: $header-colour;
+    z-index: 99999;
+}
+
+.header__title{
+    height: fit-content;
+    margin: auto auto auto $navbar-width;
+    text-align: center;
+    font-weight: lighter;
+
+    &--name{
+        margin: auto;
+        width: fit-content;
+        font-size: xx-large;
+    }
+    
+    &--post{
+        margin: auto;
+        width: fit-content;
+        font-size: large;
+    }
+
+    &--hidden{
+        visibility: hidden;
+    }
+
+    transition: visibility 0.1s ease-in-out;
+}

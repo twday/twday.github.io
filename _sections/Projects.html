@@ -1,0 +1,24 @@
+---
+layout: default
+title: Projects
+---
+<div class="card-columns m-auto">
+    {% for project in site.projects %}
+    <div class="card text-{{project.color}}">
+        {% if project.coverImage %}
+        <img src="assets/images/projects/{{ project.coverImage }}" class="card-img">
+        <div class="card-img-overlay">
+        {% else %}
+        <div class="card-body">
+        {% endif %}
+            <h5 class="card-title">{{ project.title }}</h5>
+            <a class="stretched-link" href="{{ project.url }}"></a>
+            <p class="card-text">
+                {% for tag in project.tags %}
+                    <span class="badge badge-info">{{ tag }}</span>
+                {% endfor %}
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+</div>

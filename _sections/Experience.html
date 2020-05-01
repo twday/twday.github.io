@@ -1,0 +1,26 @@
+---
+name: Experience
+---
+<a id="{{ page.name }}"></a>
+<h2 class="text-center font-weight-light">Experience</h2>
+{% for entry in site.data.experience %}
+  <div class="card border-light">
+    <div class="card-body">
+      <h5 class="card-title">
+        {{ entry.role }}
+      </h5>
+      <h6 class="card-subtitle mb-2 text-muted">
+        {{ entry.employer }}
+      </h6>
+      <p class="card-text m-0">
+        {% if entry.technologies %}
+          {% for tech in entry.technologies %}
+            <span class="badge badge-secondary">{{ tech }}</span>
+          {% endfor %}
+          <br/>
+        {% endif %}
+        {{ entry.description }}
+      </p>
+    </div>  
+  </div>
+{% endfor %}

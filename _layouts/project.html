@@ -1,0 +1,95 @@
+---
+layout: default
+---
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">{{ page.title }}</h1>
+        <p class="lead">
+            {{ page.timeSpan }}
+        </p>
+        <p class="lead">
+            {{ page.subtitle }}
+        </p>
+        {% if page.repo %}
+        <p class="lead">
+            <a class="btn btn-outline-secondary" href="{{page.repo}}" role="button">GitHub</a>
+        </p>
+        {% endif %}
+    </div>
+</div>
+<div>
+    {{ content }}
+
+    {% if page.technologies or page.collaborators or page.funding %}
+    <div class="card mb-2">
+        <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+                {% if page.technologies %}
+                <li class="nav-item">
+                    <a class="nav-link active" id="techTab" data-toggle="tab" href="#tech" role="tab" aria-controls="tech" aria-selected="true">
+                        Technologies
+                    </a>
+                </li>
+                {% endif %}
+                {% if page.collaborators %}
+                <li class="nav-item">
+                    <a class="nav-link" id="collabTab" data-toggle="tab" href="#collab" role="tab" aria-controls="collab" aria-selected="false">
+                        Collaborators
+                    </a>
+                </li>
+                {% endif %}
+                {% if page.funding %}
+                <li class="nav-item">
+                    <a class="nav-link" id="fundingTab" data-toggle="tab" href="#funding" role="tab" aria-controls="funding" aria-selected="false">
+                        Funding
+                    </a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+        <div class="tab-content" id="techTab">
+            {% if page.technologies %}
+            <div class="tab-pane fade show active" id="tech" role="tabpanel" aria-labelledby="techTab">
+                <ul class="list-group list-group-flush">
+                    {% for tech in page.technologies %}
+                    <li class="list-group-item">{{tech}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+            {% if page.collaborators %}
+            <div class="tab-pane fade" id="collab" role="tabpanel" aria-labelledby="collabTab">
+                <ul class="list-group list-group-flush">
+                    {% for collab in page.collaborators %}
+                    <li class="list-group-item">{{collab}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+            {% if page.funding %}
+            <div class="tab-pane fade" id="funding" role="tabpanel" aria-labelledby="fundingTab">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Funder</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for funding in page.funding %}
+                        <tr>
+                            <td>{{funding.funder}}</td>
+                            <td>{{funding.date_from}} - {{funding.date_to}}</td>
+                            <td>{{funding.value | money}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+
+                </table>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+</div>
