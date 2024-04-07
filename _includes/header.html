@@ -1,21 +1,23 @@
 <header class="sticky-top">
-    <nav id="navbar" class="navbar navbar-expand-md navbar-light bg-light">
-        <a class="navbar-brand" href="{{'/' | relative_url }}">
-            {{ site.title }}
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle Navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navigation">
-            <ul class="navbar-nav">
-                {% for item in site.data.navigation %}
-                <li class="nav-item {% if page.url == item.link %}active{% endif %}">
-                    <a class="nav-link" href="{{ item.link }}">
-                        {{ item.name | Uppercase }} {% if page.url == item.link %}<sr class="sr-only">(current)</sr>{% endif %}
-                    </a>
-                </li>
-                {% endfor %}    
-            </ul>
-        </div>
-    </nav>
+	<div class="navmenu">
+		<nav id="navbar" class="navbar navbar-expand-md navbar-light bg-light">
+			<a class="navbar-brand" href="{{'/' | relative_url }}">
+				{{ site.title }}
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle Navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navigation">
+				<ul class="navbar-nav">
+					{% for item in site.data.navigation %}
+					<li class="nav-item {% if page.url == item.link %}active{% endif %}">
+						<a class="nav-link" href="{{ item.link }}">
+							{{ item.name | Uppercase }} {% if page.url == item.link %}<sr class="sr-only">(current)</sr>{% endif %}
+						</a>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</nav>
+	</div>
 </header>

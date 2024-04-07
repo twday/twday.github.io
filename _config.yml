@@ -6,7 +6,7 @@ plugins:
 relative_url: /
 github: [metadata]
 sass:
-  load_paths: 
+  load_paths:
     - _sass
     - node_modules
   style: compact

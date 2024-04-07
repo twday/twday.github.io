@@ -10,6 +10,12 @@ orcid:
   title: 'Orcid'
   icon: 'ai ai-orcid'
 
+researchgate:
+  id: 'Thomas-Day-8'
+  href: 'https://www.researchgate.net/profile/'
+  title: 'ResearchGate'
+  icon: 'ai ai-researchgate'
+
 twitter:
   id: 'drtwday'
   href: 'https://twitter.com/'

@@ -4,25 +4,19 @@ title: Home
 ---
 
 <section class="page-section">
-    <div class="card m-auto">
-        <div class="row no-gutters">
-            <div class="col-sm-4">
-                <img class="card-img" src="assets/images/profile.jpg" alt="Profile Picture">
-            </div>
-            <div class="col-sm-8 d-flex align-items-center">
-                <div class="card-body">
-                    <h4 class="card-title">Thomas W. Day, Ph.D</h4>
-                    <h5 class="card-subtitle">
-                        Researcher
-                    </h5>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="landing">
+		<div class="landing--photo">
+			<img class="img-fluid w-75" src="assets/images/profile.jpg" alt="Profile Picture">
+		</div>
+		<div class="landing--title title">
+			<h1 class="fw-bold">Thomas W. Day, Ph.D</h1>
+			<h2>Head of Innovation | Rezzil</h2>
+		</div>
+	</div>
 </section>
 
 {% for section in site.sections %}
-    <section class="mb-5">
-        {{section.content}}
-    </section>
+<section class="page-section">
+	{{section.content}}
+</section>
 {% endfor %}
