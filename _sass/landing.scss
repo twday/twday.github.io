@@ -70,13 +70,13 @@
 			}
 
 			& h2 {
-				font-size: 1.5rem;
+				font-size: 1.65rem;
 			}
 		}
 
 		@media (min-width: 1024.02px) and (max-width: 1440px) {
 			& h1 {
-				font-size: 2.5rem;
+				font-size: 2.25rem;
 			}
 
 			& h2 {
@@ -84,13 +84,23 @@
 			}
 		}
 
-		@media (min-width: 1440.02px) and (max-width: 2560px) {
+		@media (min-width: 1440.02px) and (max-width: 2000px) {
 			& h1 {
-				font-size: 4rem;
+				font-size: 3rem;
 			}
 
 			& h2 {
-				font-size: 3em;
+				font-size: 2.5em;
+			}
+		}
+
+		@media (min-width: 2000.02px) {
+			& h1 {
+				font-size: 5rem;
+			}
+
+			& h2 {
+				font-size: 4em;
 			}
 		}
 	}
